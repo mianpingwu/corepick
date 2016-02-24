@@ -18,6 +18,11 @@
 		<spring.version>3.2.13.RELEASE</spring.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<com.fasterxml.jackson.core>2.1.0</com.fasterxml.jackson.core>
+		
+		<tomcat.manager.url>http://localhost:8080</tomcat.manager.url>
+		<tomcat.server>tomcat</tomcat.server>
+		<tomcat.manager.user>wmp</tomcat.manager.user>
+		<tomcat.manager.password>wmp</tomcat.manager.password>
 	</properties>
 
 	<dependencies>
@@ -88,6 +93,12 @@
 			<version>1.2</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.apache.tomcat.maven</groupId>
+			<artifactId>tomcat7-maven-plugin</artifactId>
+			<version>2.2</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -116,6 +127,20 @@
 					</execution>
 				</executions>
 			</plugin>
+
+		<plugin>
+			<groupId>org.apache.tomcat.maven</groupId>
+			<artifactId>tomcat7-maven-plugin</artifactId>
+			<version>2.2</version>
+			<configuration>
+				<url>${tomcat.manager.url}/manager/text</url>
+				<server>${tomcat.server}</server>
+				<username>${tomcat.manager.user}</username>
+				<password>${tomcat.manager.password}</password>
+				<warFile>${basedir}/target/corepick.war</warFile>
+				<path>/corepick</path>
+			</configuration>
+		</plugin>
 			
 		</plugins>
 	</build>
