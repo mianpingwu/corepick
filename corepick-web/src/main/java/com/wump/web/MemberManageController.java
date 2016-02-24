@@ -27,7 +27,7 @@ public class MemberManageController {
 	public @ResponseBody TestVo test() {
 		
 		logger.info("MemberManageController.test() execute ...");
-		String retMsg = "Hello, This is a test!";
+		String retMsg = "Hello, This is a test! Can you get it?";
 		TestVo vo = new TestVo();
 		vo.setRetMsg(retMsg);
 		return vo;
