@@ -19,7 +19,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<com.fasterxml.jackson.core>2.1.0</com.fasterxml.jackson.core>
 		
-		<tomcat.manager.url>http://localhost:8080</tomcat.manager.url>
+		<tomcat.manager.url>http://10.22.16.253:8080</tomcat.manager.url>
+		<!-- <tomcat.manager.url>http://localhost:8080</tomcat.manager.url> -->
 		<tomcat.server>tomcat</tomcat.server>
 		<tomcat.manager.user>wmp</tomcat.manager.user>
 		<tomcat.manager.password>wmp</tomcat.manager.password>
