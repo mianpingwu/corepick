@@ -1,8 +1,8 @@
 package com.wump.web;
 
 import java.util.List;
-import java.util.logging.Logger;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +15,7 @@ import com.wump.service.agerange.AgeArangeService;
 @RequestMapping(value={"/age"})
 public class AgeArangeController {
 	
-	private Logger logger = Logger.getLogger(AgeArangeController.class.getName());
+	private Logger logger = Logger.getLogger(AgeArangeController.class);
 	
 	@Autowired
 	public AgeArangeService ageArangeService;

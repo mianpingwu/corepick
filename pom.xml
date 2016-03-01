@@ -18,9 +18,10 @@
 		<spring.version>3.2.13.RELEASE</spring.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<com.fasterxml.jackson.core>2.1.0</com.fasterxml.jackson.core>
+		<log4j.version>1.2.17</log4j.version>
 		
-		<tomcat.manager.url>http://10.22.16.253:8080</tomcat.manager.url>
-		<!-- <tomcat.manager.url>http://localhost:8080</tomcat.manager.url> -->
+		<!-- <tomcat.manager.url>http://10.22.16.253:8080</tomcat.manager.url> -->
+		<tomcat.manager.url>http://localhost:8080</tomcat.manager.url>
 		<tomcat.server>tomcat</tomcat.server>
 		<tomcat.manager.user>wmp</tomcat.manager.user>
 		<tomcat.manager.password>wmp</tomcat.manager.password>
@@ -99,6 +100,12 @@
 			<artifactId>tomcat7-maven-plugin</artifactId>
 			<version>2.2</version>
 			<optional>true</optional>
+		</dependency>
+		
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
 		</dependency>
 
 	</dependencies>

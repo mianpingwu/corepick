@@ -12,5 +12,7 @@ public class TestVo {
 		this.retMsg = retMsg;
 	}
 	
-	
+	public String toString() {
+		return retMsg;
+	}
 }
