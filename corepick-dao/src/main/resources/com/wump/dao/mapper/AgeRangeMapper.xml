@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<!-- Mapper.java namespace -->
+<mapper namespace="com.wump.dao.mybatis.AgeRangeMapper">
+
+	<!-- Person.java namespace -->
+    <resultMap id="ageRange" type="com.wump.model.AgeRange">
+        <!-- map table "person"column to class "Person" property -->
+        <id property="ageRangeCode" column="age_range_code" />
+        <result property="ageFrom" column="age_from"/>
+        <result property="ageTo" column="age_to"/>
+        <result property="description" column="description"/>
+    </resultMap>
+     
+    <select id="getAllAgeRange" resultMap="ageRange">
+        SELECT * FROM age_range
+    </select>
+    
+    <select id="getAgeRangeById" parameterType="java.lang.String" resultMap="ageRange">
+    	SELECT * FROM age_range where age_range_code=#{ageRangeCode}
+    </select>
+    
+</mapper>

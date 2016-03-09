@@ -46,4 +46,9 @@ public class AgeRange implements Serializable {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
+	public String toString() {
+		
+		return "AgeRange: [" + ageRangeCode + "--" + ageFrom + "--" + ageTo + "--" + description + "]";
+	}
 }
